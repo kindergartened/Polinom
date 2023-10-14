@@ -139,7 +139,7 @@ namespace PolinomSR
         /// </summary>
         /// <param name="a">1-й полином</param>
         /// <param name="b">2-й полином</param>
-        /// <returns>сумма 2-ух полиномов</returns>
+        /// <returns>сумма 2-х полиномов</returns>
         public static Polinom operator +(Polinom a, Polinom b)
         {
             Polinom p;
@@ -160,6 +160,12 @@ namespace PolinomSR
             return p;
         }
 
+        /// <summary>
+        /// Вычитание полиномов заданных коэффициентами
+        /// </summary>
+        /// <param name="a">первый полином</param>
+        /// <param name="b">второй полином</param>
+        /// <returns>разность 2-х полиномов</returns>
         public static Polinom operator -(Polinom a, Polinom b)
         {
             Polinom p;
@@ -180,6 +186,12 @@ namespace PolinomSR
             return p;
         }
 
+        /// <summary>
+        /// Выполняет операцию умножения полинома на полином
+        /// </summary>
+        /// <param name="a">первый полином</param>
+        /// <param name="b">второй полином</param>
+        /// <returns>возвращает полином который является результатом деления</returns>
         public static Polinom operator *(Polinom a, Polinom b)
         {
             Polinom p;
@@ -203,6 +215,12 @@ namespace PolinomSR
             return p;
         }
 
+        /// <summary>
+        /// Выполняет операцию деления полинома на полином
+        /// </summary>
+        /// <param name="a">первый полином</param>
+        /// <param name="b">второй полином</param>
+        /// <returns>возвращает полином который является результатом деления</returns>
         public static Polinom operator /(Polinom a, Polinom b)
         {
             Polinom p, t;
@@ -228,6 +246,12 @@ namespace PolinomSR
             return p;
         }
 
+        /// <summary>
+        /// Выполняет поиск отстатка от деления полинома на полином
+        /// </summary>
+        /// <param name="a">первый полином</param>
+        /// <param name="b">второй полином</param>
+        /// <returns>возвращает полином содержащий остаток от деления</returns>
         public static Polinom operator %(Polinom a, Polinom b)
         {
             Polinom p, t;

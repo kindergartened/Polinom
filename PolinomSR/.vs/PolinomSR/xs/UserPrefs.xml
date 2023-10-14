@@ -1,25 +1,23 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.PolinomSR FirstBuild="True" />
   <MonoDevelop.Ide.Workbench ActiveDocument="PolinomSR/Polinom.cs">
     <Files>
-      <File FileName="PolinomSR/Polinom.cs" Line="273" Column="10" />
+      <File FileName="PolinomSR/Polinom.cs" Line="164" Column="56" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="PolinomSR">
-            <Node name="PolinomSR" expanded="True">
-              <Node name="Polinom.cs" selected="True" />
-            </Node>
+          <Node name="PolinomSR" expanded="True" selected="True">
+            <Node name="PolinomSR" expanded="True" />
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.PolinomSR FirstBuild="True" />
 </Properties>
