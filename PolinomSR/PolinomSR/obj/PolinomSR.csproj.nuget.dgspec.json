@@ -1,0 +1,62 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/vladislavkirillov/Documents/2 курс ФИТ/Биллиг/Polinom/PolinomSR/PolinomSR/PolinomSR.csproj": {}
+  },
+  "projects": {
+    "/Users/vladislavkirillov/Documents/2 курс ФИТ/Биллиг/Polinom/PolinomSR/PolinomSR/PolinomSR.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/vladislavkirillov/Documents/2 курс ФИТ/Биллиг/Polinom/PolinomSR/PolinomSR/PolinomSR.csproj",
+        "projectName": "PolinomSR",
+        "projectPath": "/Users/vladislavkirillov/Documents/2 курс ФИТ/Биллиг/Polinom/PolinomSR/PolinomSR/PolinomSR.csproj",
+        "packagesPath": "/Users/vladislavkirillov/.nuget/packages/",
+        "outputPath": "/Users/vladislavkirillov/Documents/2 курс ФИТ/Биллиг/Polinom/PolinomSR/PolinomSR/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/vladislavkirillov/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.302/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
