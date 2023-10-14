@@ -13,6 +13,8 @@ namespace PolinomSR
         double[] koef;
         static new Random r = new Random();
 
+        public int N => n;
+
         /// <summary>
         /// Конструктор по умолчанию создающий полином 3-й степени
         /// </summary>
@@ -93,14 +95,14 @@ namespace PolinomSR
                     }
                     s += s1;
                 }
-                if (koef[0] >= 0)
-                {
-                    s += "+" + koef[0];
-                }
-                else
-                {
-                    s += koef[0].ToString();
-                }
+            }
+            if (koef[0] >= 0)
+            {
+                s += "+" + koef[0];
+            }
+            else
+            {
+                s += koef[0].ToString();
             }
             return s;
         }
@@ -273,4 +275,3 @@ namespace PolinomSR
         }
     }
 }
-

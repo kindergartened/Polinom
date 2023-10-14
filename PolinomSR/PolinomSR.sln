@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 25.0.1706.0
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolinomSR", "PolinomSR\PolinomSR.csproj", "{D68EC683-ADEA-4349-9FA5-8ADD06730347}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PolinomSR", "PolinomSR\PolinomSR.csproj", "{D68EC683-ADEA-4349-9FA5-8ADD06730347}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "polinomTest", "polinomTest\polinomTest.csproj", "{54695F73-CBCD-4578-B86D-43C198266903}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{D68EC683-ADEA-4349-9FA5-8ADD06730347}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D68EC683-ADEA-4349-9FA5-8ADD06730347}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D68EC683-ADEA-4349-9FA5-8ADD06730347}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54695F73-CBCD-4578-B86D-43C198266903}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54695F73-CBCD-4578-B86D-43C198266903}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54695F73-CBCD-4578-B86D-43C198266903}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54695F73-CBCD-4578-B86D-43C198266903}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
