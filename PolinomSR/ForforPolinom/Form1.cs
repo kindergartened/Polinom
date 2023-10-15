@@ -1,3 +1,4 @@
+using PolinomSR;
 using static PolinomSR.Polinom;
 namespace ForforPolinom
 {
@@ -12,20 +13,34 @@ namespace ForforPolinom
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int n = Convert.ToInt32(textBox1.Text);
-            int min = Convert.ToInt32(textBox2.Text);
-            int max = Convert.ToInt32(textBox3.Text);
-            polinom1 = new PolinomSR.Polinom(n, min, max);
-            richTextBox1.Text = polinom1.ToString();
+            try
+            {
+                int n = Convert.ToInt32(textBox1.Text);
+                int min = Convert.ToInt32(textBox2.Text);
+                int max = Convert.ToInt32(textBox3.Text);
+                polinom1 = new PolinomSR.Polinom(n, min, max);
+                richTextBox1.Text = polinom1.ToString();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("ошибка");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int n = Convert.ToInt32(textBox4.Text);
-            int min = Convert.ToInt32(textBox5.Text);
-            int max = Convert.ToInt32(textBox6.Text);
-            polinom2 = new PolinomSR.Polinom(n, min, max);
-            richTextBox2.Text = polinom2.ToString();
+            try
+            {
+                int n = Convert.ToInt32(textBox4.Text);
+                int min = Convert.ToInt32(textBox5.Text);
+                int max = Convert.ToInt32(textBox6.Text);
+                polinom2 = new PolinomSR.Polinom(n, min, max);
+                richTextBox2.Text = polinom2.ToString();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("ошибка");
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -97,13 +112,13 @@ namespace ForforPolinom
         }
 
         private void button8_Click(object sender, EventArgs e)
-        {
-            double x=Convert.ToDouble(textBox7.Text);
+        {   
             try
             {
-                
+                double x = Convert.ToDouble(textBox7.Text);
+                textBox9.Text=polinom1.P(x).ToString();
             }
-            catch (Exception) { }
+            catch (Exception) { MessageBox.Show("ошибка"); }
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -126,6 +141,19 @@ namespace ForforPolinom
                 richTextBox3.Text = (polinom1 % polinom2).ToString();
             }
             catch (Exception)
+            {
+                MessageBox.Show("ошибка");
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double x = Convert.ToDouble(textBox7.Text);
+                textBox10.Text = polinom2.P(x).ToString();
+            }
+            catch (Exception) 
             {
                 MessageBox.Show("ошибка");
             }
