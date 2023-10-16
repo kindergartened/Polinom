@@ -12,8 +12,7 @@ namespace Tests
             Polinom p2 = new Polinom(new double[] { 2, 1 }); // 2x + 1
 
             Polinom result = p1 * p2; // (3x^2 - 2) * (2x + 1) = 6x^3 + x^2 - 4x - 2
-
-            Assert.AreEqual(new Polinom(new double[] { 6, 1, -4, -2 }), result);
+            CollectionAssert.AreEqual((dynamic)new Polinom(new double[] { 6, 1, -4, -2 }).Coefs, (dynamic)result.Coefs);
         }
 
         [TestMethod]

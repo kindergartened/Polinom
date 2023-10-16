@@ -12,7 +12,7 @@ namespace PolinomSR
         private int n;
         double[] koef;
         static Random r = new Random();
-
+        public double[] Coefs { get { return koef; } }
         /// <summary>
         /// Конструктор по умолчанию создающий полином 3-й степени
         /// </summary>
