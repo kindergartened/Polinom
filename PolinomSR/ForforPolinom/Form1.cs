@@ -104,6 +104,8 @@ namespace ForforPolinom
             try
             {
                 richTextBox3.Text = (polinom1 / polinom2).ToString();
+                if (richTextBox3.Text == "")
+                    richTextBox3.Text ="0";
             }
             catch (Exception)
             {
@@ -120,12 +122,6 @@ namespace ForforPolinom
             }
             catch (Exception) { MessageBox.Show("ошибка"); }
         }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button7_Click(object sender, EventArgs e)
         {
             if (richTextBox1.Text == "" || richTextBox2.Text == "")

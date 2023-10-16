@@ -200,7 +200,8 @@ namespace PolinomSR
             int m = b.n;
             if (n < m)
             {
-                return new Polinom(0);
+                Polinom zero=new Polinom(n,0,0);
+                return zero;
             }
             double d = 0;
             Polinom p = new Polinom(n - m);
@@ -220,45 +221,7 @@ namespace PolinomSR
 
         public static Polinom operator %(Polinom a, Polinom b)
         {
-            Polinom p, t;
-            int n = a.n;
-            int m = b.n;
-            if (n < m)
-            {
-                return new Polinom(0);
-            }
-            double d = 0;
-            p = new Polinom(n - m);
-            t = new Polinom(a.koef);
-            for (int i = 0; i <= n - m; i++)
-            {
-                d = t.koef[n - i] / b.koef[m];
-                p.koef[n - m - i] = d;
-                t.koef[n - i] = 0;
-                for (int j = 0; j <= m; j++)
-                {
-                    t.koef[n - i - j] = t.koef[n - i - j] - d * b.koef[m - j];
-                }
-            }
-            int k = 0;
-            double[] af;
-            while (k <= n && t.koef[n - k] == 0)
-            {
-                k++;
-            }
-            if (k <= n)
-            {
-                af = new double[n - k + 1];
-                for (int i = 0; i <= n; i++)
-                {
-                    af[i] = t.koef[i];
-                }
-            }
-            else
-            {
-                af = new double[1];
-            }
-            return new Polinom(af);
+            return a - b * (a/b);
         }
     }
 }
