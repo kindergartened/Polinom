@@ -1,0 +1,12 @@
+F:\PolinomKR\PolinomSR\PolinomSR\bin\Debug\net6.0\PolinomSR.deps.json
+F:\PolinomKR\PolinomSR\PolinomSR\bin\Debug\net6.0\PolinomSR.dll
+F:\PolinomKR\PolinomSR\PolinomSR\bin\Debug\net6.0\PolinomSR.pdb
+F:\PolinomKR\PolinomSR\PolinomSR\obj\Debug\net6.0\PolinomSR.csproj.AssemblyReference.cache
+F:\PolinomKR\PolinomSR\PolinomSR\obj\Debug\net6.0\PolinomSR.GeneratedMSBuildEditorConfig.editorconfig
+F:\PolinomKR\PolinomSR\PolinomSR\obj\Debug\net6.0\PolinomSR.AssemblyInfoInputs.cache
+F:\PolinomKR\PolinomSR\PolinomSR\obj\Debug\net6.0\PolinomSR.AssemblyInfo.cs
+F:\PolinomKR\PolinomSR\PolinomSR\obj\Debug\net6.0\PolinomSR.csproj.CoreCompileInputs.cache
+F:\PolinomKR\PolinomSR\PolinomSR\obj\Debug\net6.0\PolinomSR.dll
+F:\PolinomKR\PolinomSR\PolinomSR\obj\Debug\net6.0\refint\PolinomSR.dll
+F:\PolinomKR\PolinomSR\PolinomSR\obj\Debug\net6.0\PolinomSR.pdb
+F:\PolinomKR\PolinomSR\PolinomSR\obj\Debug\net6.0\ref\PolinomSR.dll

@@ -11,7 +11,7 @@ namespace PolinomSR
         /// <param name="koef">Коэффициенты полинома</param>
         private int n;
         double[] koef;
-        static new Random r = new Random();
+        static Random r = new Random();
 
         /// <summary>
         /// Конструктор по умолчанию создающий полином 3-й степени
@@ -69,7 +69,6 @@ namespace PolinomSR
         /// <returns>Возвращает строку представляющую полином</returns>
         public override string ToString()
         {
-            //ПОСЛШУАТЬ В ЛЕКЦИИ ЧТО ДА КАК ТУТ
             string s = "", s1 = "";
             for (int i = n; i > 0; i--)
             {
@@ -78,31 +77,24 @@ namespace PolinomSR
                     s1 = "";
                 }
                 else
-                {
-                    if (Math.Abs(koef[i]) == 1)
-                    {
-                        s1 = "x^" + i;
-                    }
-                    else
-                    {
-                        s1 = koef[i] + "x^" + i;
-                    }
+                {                   
+                    s1 = Math.Abs(koef[i]) == 1 ? "x^" + i : koef[i] + "x^" + i;
                     if (koef[i] > 0)
-                    {
                         s1 = "+" + s1;
-                    }
                     s += s1;
                 }
-                if (koef[0] >= 0)
-                {
-                    s += "+" + koef[0];
-                }
-                else
-                {
-                    s += koef[0].ToString();
-                }
             }
-            return s;
+            if (koef[0] > 0)
+            {
+                s += "+" + koef[0];
+            }
+            else if (koef[0] == 0)
+                s += "";
+            else
+            {
+                s += koef[0].ToString();
+            }
+            return s.TrimStart('+');
         }
 
         /// <summary>
@@ -152,11 +144,11 @@ namespace PolinomSR
             {
                 p.koef[i] = a.koef[i] + b.koef[i];
             }
-            for (int i = m + 1; i <= n; i++) //дописывание старших коэффициентов
-            {
-                p.koef[i] = (a.n >= b.n) ? a.koef[i] : b.koef[i];
-            }
-
+            if (n!=m)
+                for (int i = m + 1; i <= n; i++) //дописывание старших коэффициентов
+                {
+                    p.koef[i] = (a.n >= b.n) ? a.koef[i] : b.koef[i];
+                }
             return p;
         }
 
@@ -178,11 +170,11 @@ namespace PolinomSR
             {
                 p.koef[i] = a.koef[i] - b.koef[i];
             }
-            for (int i = m + 1; i <= n; i++) //дописывание старших коэффициентов
-            {
-                p.koef[i] = (a.n >= b.n) ? a.koef[i] : -b.koef[i];
-            }
-
+            if (n != m)
+                for (int i = m + 1; i <= n; i++) //дописывание старших коэффициентов
+                 {
+                    p.koef[i] = (a.n >= b.n) ? a.koef[i] : -b.koef[i];
+                 }
             return p;
         }
 
@@ -211,7 +203,6 @@ namespace PolinomSR
                     }
                 }
             }
-
             return p;
         }
 
@@ -223,16 +214,16 @@ namespace PolinomSR
         /// <returns>возвращает полином который является результатом деления</returns>
         public static Polinom operator /(Polinom a, Polinom b)
         {
-            Polinom p, t;
             int n = a.n;
             int m = b.n;
             if (n < m)
             {
-                return new Polinom(0);
+                Polinom zero=new Polinom(n,0,0);
+                return zero;
             }
             double d = 0;
-            p = new Polinom(n - m);
-            t = new Polinom(a.koef);
+            Polinom p = new Polinom(n - m);
+            Polinom t = new Polinom(a.koef);
             for (int i = 0; i <= n - m; i++)
             {
                 d = t.koef[n - i] / b.koef[m];
@@ -254,46 +245,7 @@ namespace PolinomSR
         /// <returns>возвращает полином содержащий остаток от деления</returns>
         public static Polinom operator %(Polinom a, Polinom b)
         {
-            Polinom p, t;
-            int n = a.n;
-            int m = b.n;
-            if (n < m)
-            {
-                return new Polinom(0);
-            }
-            double d = 0;
-            p = new Polinom(n - m);
-            t = new Polinom(a.koef);
-            for (int i = 0; i <= n - m; i++)
-            {
-                d = t.koef[n - i] / b.koef[m];
-                p.koef[n - m - i] = d;
-                t.koef[n - i] = 0;
-                for (int j = 0; j <= m; j++)
-                {
-                    t.koef[n - i - j] = t.koef[n - i - j] - d * b.koef[m - j];
-                }
-            }
-            int k = 0;
-            double[] af;
-            while (k <= n && t.koef[n - k] == 0)
-            {
-                k++;
-            }
-            if (k <= n)
-            {
-                af = new double[n - k + 1];
-                for (int i = 0; i <= n; i++)
-                {
-                    af[i] = t.koef[i];
-                }
-            }
-            else
-            {
-                af = new double[1];
-            }
-
-            return new Polinom(af);
+            return a - b * (a/b);
         }
     }
 }
