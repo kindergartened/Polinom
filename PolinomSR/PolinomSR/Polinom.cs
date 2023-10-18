@@ -10,9 +10,14 @@ namespace PolinomSR
         /// <param name="n">Степень полинома</param>
         /// <param name="koef">Коэффициенты полинома</param>
         private int n;
-        double[] koef;
+        private double[] koef;
         static Random r = new Random();
+        
+        /// <summary>
+        /// Свойство для получения массива коэффициентов
+        /// </summary>
         public double[] Coefs { get { return koef; } }
+
         /// <summary>
         /// Конструктор по умолчанию создающий полином 3-й степени
         /// </summary>

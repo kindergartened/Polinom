@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\PolinomSR",
+    "\\PolinomSR\\Tests"
   ],
-  "SelectedNode": "\\PolinomSR.sln",
+  "SelectedNode": "\\PolinomSR\\Tests\\UnitTest1.cs",
   "PreviewInSolutionExplorer": false
 }

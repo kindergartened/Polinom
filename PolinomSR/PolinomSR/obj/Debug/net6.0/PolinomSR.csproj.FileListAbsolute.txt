@@ -10,3 +10,14 @@ F:\PolinomKR\PolinomSR\PolinomSR\obj\Debug\net6.0\PolinomSR.dll
 F:\PolinomKR\PolinomSR\PolinomSR\obj\Debug\net6.0\refint\PolinomSR.dll
 F:\PolinomKR\PolinomSR\PolinomSR\obj\Debug\net6.0\PolinomSR.pdb
 F:\PolinomKR\PolinomSR\PolinomSR\obj\Debug\net6.0\ref\PolinomSR.dll
+D:\Studies\c#\Polynom1\Polinom\PolinomSR\PolinomSR\bin\Debug\net6.0\PolinomSR.deps.json
+D:\Studies\c#\Polynom1\Polinom\PolinomSR\PolinomSR\bin\Debug\net6.0\PolinomSR.dll
+D:\Studies\c#\Polynom1\Polinom\PolinomSR\PolinomSR\bin\Debug\net6.0\PolinomSR.pdb
+D:\Studies\c#\Polynom1\Polinom\PolinomSR\PolinomSR\obj\Debug\net6.0\PolinomSR.GeneratedMSBuildEditorConfig.editorconfig
+D:\Studies\c#\Polynom1\Polinom\PolinomSR\PolinomSR\obj\Debug\net6.0\PolinomSR.AssemblyInfoInputs.cache
+D:\Studies\c#\Polynom1\Polinom\PolinomSR\PolinomSR\obj\Debug\net6.0\PolinomSR.AssemblyInfo.cs
+D:\Studies\c#\Polynom1\Polinom\PolinomSR\PolinomSR\obj\Debug\net6.0\PolinomSR.csproj.CoreCompileInputs.cache
+D:\Studies\c#\Polynom1\Polinom\PolinomSR\PolinomSR\obj\Debug\net6.0\PolinomSR.dll
+D:\Studies\c#\Polynom1\Polinom\PolinomSR\PolinomSR\obj\Debug\net6.0\refint\PolinomSR.dll
+D:\Studies\c#\Polynom1\Polinom\PolinomSR\PolinomSR\obj\Debug\net6.0\PolinomSR.pdb
+D:\Studies\c#\Polynom1\Polinom\PolinomSR\PolinomSR\obj\Debug\net6.0\ref\PolinomSR.dll
