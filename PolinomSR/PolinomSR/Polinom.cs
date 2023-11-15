@@ -9,10 +9,17 @@ namespace PolinomSR
         /// </summary>
         /// <param name="n">Степень полинома</param>
         /// <param name="koef">Коэффициенты полинома</param>
-        private int n;
-        private double[] koef;
+        protected int n;
+        protected double[] koef;
         static Random r = new Random();
-        
+
+        public int N
+        {
+            get
+            {
+                return n;
+            }
+        }
         /// <summary>
         /// Свойство для получения массива коэффициентов
         /// </summary>
@@ -82,7 +89,7 @@ namespace PolinomSR
                     s1 = "";
                 }
                 else
-                {                   
+                {
                     s1 = Math.Abs(koef[i]) == 1 ? "x^" + i : koef[i] + "x^" + i;
                     if (koef[i] > 0)
                         s1 = "+" + s1;
@@ -149,7 +156,7 @@ namespace PolinomSR
             {
                 p.koef[i] = a.koef[i] + b.koef[i];
             }
-            if (n!=m)
+            if (n != m)
                 for (int i = m + 1; i <= n; i++) //дописывание старших коэффициентов
                 {
                     p.koef[i] = (a.n >= b.n) ? a.koef[i] : b.koef[i];
@@ -177,9 +184,9 @@ namespace PolinomSR
             }
             if (n != m)
                 for (int i = m + 1; i <= n; i++) //дописывание старших коэффициентов
-                 {
+                {
                     p.koef[i] = (a.n >= b.n) ? a.koef[i] : -b.koef[i];
-                 }
+                }
             return p;
         }
 
@@ -223,7 +230,7 @@ namespace PolinomSR
             int m = b.n;
             if (n < m)
             {
-                Polinom zero=new Polinom(n,0,0);
+                Polinom zero = new Polinom(n, 0, 0);
                 return zero;
             }
             double d = 0;
@@ -250,12 +257,12 @@ namespace PolinomSR
         /// <returns>возвращает полином содержащий остаток от деления</returns>
         public static Polinom operator %(Polinom a, Polinom b)
         {
-            return a - b * (a/b);
+            return a - b * (a / b);
         }
         public Polinom Integral()
         {
-            double[] b = new double[n+2];
-            for (int i = n+1; i > 0; i--)
+            double[] b = new double[n + 2];
+            for (int i = n + 1; i > 0; i--)
             {
                 b[i] = koef[i - 1] / i;
             }
@@ -269,10 +276,10 @@ namespace PolinomSR
         public Polinom Pow(int n)
         {
             if (n == 0)
-                return new Polinom(new double[] {1});
+                return new Polinom(new double[] { 1 });
             Polinom p = new Polinom(koef);
-            Polinom p2= new Polinom(new double[] { 1 });
-            while(n > 1)
+            Polinom p2 = new Polinom(new double[] { 1 });
+            while (n > 1)
             {
                 if (n % 2 == 0)
                 {
@@ -287,20 +294,6 @@ namespace PolinomSR
             }
             return p * p2;
         }
-    }
-    /// <summary>
-    /// Класс Полином с возможностью вычислить корни и найти точки экстремума
-    /// </summary>
-    public class PolinomRoots : Polinom
-    {
-        protected List<double> roots=new();
-
-        //свойство для доступа к корням полинома
-        public List<double> Roots
-        {
-            get { return roots; }
-        }
-
     }
 }
 
