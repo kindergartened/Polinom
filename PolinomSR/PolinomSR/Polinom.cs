@@ -252,6 +252,55 @@ namespace PolinomSR
         {
             return a - b * (a/b);
         }
+        public Polinom Integral()
+        {
+            double[] b = new double[n+2];
+            for (int i = n+1; i > 0; i--)
+            {
+                b[i] = koef[i - 1] / i;
+            }
+            return new Polinom(b);
+        }
+        /// <summary>
+        /// возведение полинома в целую степень n>0
+        /// </summary>
+        /// <param name="n">степень>0</param>
+        /// <returns></returns>
+        public Polinom Pow(int n)
+        {
+            if (n == 0)
+                return new Polinom(new double[] {1});
+            Polinom p = new Polinom(koef);
+            Polinom p2= new Polinom(new double[] { 1 });
+            while(n > 1)
+            {
+                if (n % 2 == 0)
+                {
+                    p *= p;
+                    n /= 2;
+                }
+                else
+                {
+                    p2 *= p;
+                    n--;
+                }
+            }
+            return p * p2;
+        }
+    }
+    /// <summary>
+    /// Класс Полином с возможностью вычислить корни и найти точки экстремума
+    /// </summary>
+    public class PolinomRoots : Polinom
+    {
+        protected List<double> roots=new();
+
+        //свойство для доступа к корням полинома
+        public List<double> Roots
+        {
+            get { return roots; }
+        }
+
     }
 }
 

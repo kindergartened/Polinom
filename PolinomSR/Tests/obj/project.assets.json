@@ -6352,19 +6352,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nevzo\\.nuget\\packages\\": {}
+    "C:\\Users\\Nik\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Studies\\c#\\Polynom1\\Polinom\\PolinomSR\\Tests\\Tests.csproj",
+      "projectUniqueName": "F:\\polinom\\PolinomSR\\Tests\\Tests.csproj",
       "projectName": "Tests",
-      "projectPath": "D:\\Studies\\c#\\Polynom1\\Polinom\\PolinomSR\\Tests\\Tests.csproj",
-      "packagesPath": "C:\\Users\\nevzo\\.nuget\\packages\\",
-      "outputPath": "D:\\Studies\\c#\\Polynom1\\Polinom\\PolinomSR\\Tests\\obj\\",
+      "projectPath": "F:\\polinom\\PolinomSR\\Tests\\Tests.csproj",
+      "packagesPath": "C:\\Users\\Nik\\.nuget\\packages\\",
+      "outputPath": "F:\\polinom\\PolinomSR\\Tests\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\nevzo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Nik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6372,14 +6377,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Studies\\c#\\Polynom1\\Polinom\\PolinomSR\\PolinomSR\\PolinomSR.csproj": {
-              "projectPath": "D:\\Studies\\c#\\Polynom1\\Polinom\\PolinomSR\\PolinomSR\\PolinomSR.csproj"
+            "F:\\polinom\\PolinomSR\\PolinomSR\\PolinomSR.csproj": {
+              "projectPath": "F:\\polinom\\PolinomSR\\PolinomSR\\PolinomSR.csproj"
             }
           }
         }
@@ -6427,7 +6433,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
