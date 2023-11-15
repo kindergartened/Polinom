@@ -13,13 +13,11 @@ namespace PolinomSR
         protected double[] koef;
         static Random r = new Random();
 
-        public int N
-        {
-            get
-            {
-                return n;
-            }
-        }
+        /// <summary>
+        /// Гетер для степени полинома
+        /// </summary>
+        public int N { get { return n; } }
+
         /// <summary>
         /// Свойство для получения массива коэффициентов
         /// </summary>
@@ -93,6 +91,8 @@ namespace PolinomSR
                     s1 = Math.Abs(koef[i]) == 1 ? "x^" + i : koef[i] + "x^" + i;
                     if (koef[i] > 0)
                         s1 = "+" + s1;
+                    else if (s1[0] != '-')
+                        s1 = "-" + s1;
                     s += s1;
                 }
             }
@@ -110,7 +110,7 @@ namespace PolinomSR
         }
 
         /// <summary>
-        /// Вычисление значения полинома в точке Х (Алгоритм Горнера)
+        /// Вычисление значения полинома в точке Х (Схема Горнера)
         /// </summary>
         /// <param name="x">точка</param>
         /// <returns>Р(х)</returns>
@@ -128,10 +128,10 @@ namespace PolinomSR
         /// Поиск производной полинома
         /// </summary>
         /// <returns>возвращает полином представляющий производную</returns>
-        public Polinom DerivativePolinom()
+        public Polinom Derivative()
         {
             double[] b = new double[n];
-            for (int i = n; i >= 0; i--)
+            for (int i = n; i > 0; i--)
             {
                 b[i - 1] = i * koef[i];
             }
@@ -255,10 +255,12 @@ namespace PolinomSR
         /// <param name="a">первый полином</param>
         /// <param name="b">второй полином</param>
         /// <returns>возвращает полином содержащий остаток от деления</returns>
-        public static Polinom operator %(Polinom a, Polinom b)
-        {
-            return a - b * (a / b);
-        }
+        public static Polinom operator %(Polinom a, Polinom b) => a - b * (a / b);
+
+        /// <summary>
+        /// Нахождение интеграла полинома
+        /// </summary>
+        /// <returns>Проинтегрированный полином</returns>
         public Polinom Integral()
         {
             double[] b = new double[n + 2];

@@ -1,5 +1,4 @@
-using PolinomSR;
-using static PolinomSR.Polinom;
+п»їusing PolinomSR;
 namespace ForforPolinom
 {
     public partial class Form1 : Form
@@ -8,8 +7,9 @@ namespace ForforPolinom
         {
             InitializeComponent();
         }
-        PolinomSR.Polinom polinom1;
-        PolinomSR.Polinom polinom2;
+        PolinomRoots polinom1;
+        PolinomRoots polinom2;
+        const int MAX_X = 10000;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -18,98 +18,90 @@ namespace ForforPolinom
                 int n = Convert.ToInt32(textBox1.Text);
                 int min = Convert.ToInt32(textBox2.Text);
                 int max = Convert.ToInt32(textBox3.Text);
-                polinom1 = new PolinomSR.Polinom(n, min, max);
-                richTextBox1.Text = polinom1.ToString();
+                if (isFirst.Checked)
+                {
+                    polinom1 = new PolinomRoots(n, min, max);
+                    polinomText1.Text = polinom1.ToString();
+                }
+                else
+                {
+                    polinom2 = new PolinomRoots(n, min, max);
+                    polinomText2.Text = polinom2.ToString();
+                }
             }
-            catch (Exception)
+            catch (Exception err)
             {
-                MessageBox.Show("ошибка");
-            }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                int n = Convert.ToInt32(textBox4.Text);
-                int min = Convert.ToInt32(textBox5.Text);
-                int max = Convert.ToInt32(textBox6.Text);
-                polinom2 = new PolinomSR.Polinom(n, min, max);
-                richTextBox2.Text = polinom2.ToString();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("ошибка");
+                MessageBox.Show("РћС€РёР±РєР°: " + err.Message);
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (richTextBox1.Text == "" || richTextBox2.Text == "")
+            if (polinomText1.Text == "" || polinomText2.Text == "")
             {
-                MessageBox.Show("Пустые поля");
+                MessageBox.Show("РџСѓСЃС‚С‹Рµ РїРѕР»СЏ");
             }
             try
             {
-                richTextBox3.Text = (polinom1 + polinom2).ToString();
+                output.Text = (polinom1 + polinom2).ToString();
             }
-            catch (Exception)
+            catch (Exception err)
             {
-                MessageBox.Show("ошибка");
+                MessageBox.Show("РћС€РёР±РєР°: " + err.Message);
             }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (richTextBox1.Text == "" || richTextBox2.Text == "")
+            if (polinomText1.Text == "" || polinomText2.Text == "")
             {
-                MessageBox.Show("Пустые поля");
+                MessageBox.Show("РџСѓСЃС‚С‹Рµ РїРѕР»СЏ");
             }
             try
             {
-                richTextBox3.Text = (polinom1 - polinom2).ToString();
+                output.Text = (polinom1 - polinom2).ToString();
             }
-            catch (Exception)
+            catch (Exception err)
             {
-                MessageBox.Show("ошибка");
+                MessageBox.Show("РћС€РёР±РєР°: " + err.Message);
             }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if (richTextBox1.Text == "" || richTextBox2.Text == "")
+            if (polinomText1.Text == "" || polinomText2.Text == "")
             {
-                MessageBox.Show("Пустые поля");
+                MessageBox.Show("РџСѓСЃС‚С‹Рµ РїРѕР»СЏ");
             }
             try
             {
-                richTextBox3.Text = (polinom1 * polinom2).ToString();
+                output.Text = (polinom1 * polinom2).ToString();
             }
-            catch (Exception)
+            catch (Exception err)
             {
-                MessageBox.Show("ошибка");
+                MessageBox.Show("РћС€РёР±РєР°: " + err.Message);
             }
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            if (richTextBox1.Text == "" || richTextBox2.Text == "")
+            if (polinomText1.Text == "" || polinomText2.Text == "")
             {
-                MessageBox.Show("Пустые поля");
+                MessageBox.Show("РџСѓСЃС‚С‹Рµ РїРѕР»СЏ");
             }
-            if (richTextBox2.Text == "0")
+            if (polinomText2.Text == "0")
             {
-                throw new ArgumentException("На ноль делить нельзя");
+                throw new ArgumentException("РќР° РЅРѕР»СЊ РґРµР»РёС‚СЊ РЅРµР»СЊР·СЏ");
             }
             try
             {
-                richTextBox3.Text = (polinom1 / polinom2).ToString();
-                if (richTextBox3.Text == "")
-                    richTextBox3.Text = "0";
+                output.Text = (polinom1 / polinom2).ToString();
+                if (output.Text == "")
+                    output.Text = "0";
             }
-            catch (Exception)
+            catch (Exception err)
             {
-                MessageBox.Show("ошибка");
+                MessageBox.Show("РћС€РёР±РєР°: " + err.Message);
             }
         }
 
@@ -117,41 +109,157 @@ namespace ForforPolinom
         {
             try
             {
-                double x = Convert.ToDouble(textBox7.Text);
-                textBox9.Text = polinom1.P(x).ToString();
+                if (isFirst.Checked)
+                {
+                    double x = Convert.ToDouble(textBox7.Text);
+                    textBox9.Text = polinom1.P(x).ToString();
+                }
+                else
+                {
+                    double x = Convert.ToDouble(textBox7.Text);
+                    textBox9.Text = polinom2.P(x).ToString();
+                }
             }
-            catch (Exception) { MessageBox.Show("ошибка"); }
+            catch (Exception err) { MessageBox.Show("РћС€РёР±РєР°: " + err.Message); }
         }
         private void button7_Click(object sender, EventArgs e)
         {
-            if (richTextBox1.Text == "" || richTextBox2.Text == "")
+            if (polinomText1.Text == "" || polinomText2.Text == "")
             {
-                MessageBox.Show("Пустые поля");
+                MessageBox.Show("РџСѓСЃС‚С‹Рµ РїРѕР»СЏ");
             }
-            if (richTextBox2.Text == "0")
+            if (polinomText2.Text == "0")
             {
-                throw new ArgumentException("На ноль делить нельзя");
+                throw new ArgumentException("РќР° РЅРѕР»СЊ РґРµР»РёС‚СЊ РЅРµР»СЊР·СЏ");
             }
             try
             {
-                richTextBox3.Text = (polinom1 % polinom2).ToString();
+                output.Text = (polinom1 % polinom2).ToString();
             }
-            catch (Exception)
+            catch (Exception err)
             {
-                MessageBox.Show("ошибка");
+                MessageBox.Show("РћС€РёР±РєР°: " + err.Message);
             }
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void pow_Click(object sender, EventArgs e)
         {
             try
             {
-                double x = Convert.ToDouble(textBox8.Text);
-                textBox10.Text = polinom2.P(x).ToString();
+                int pow = int.Parse(powVal.Text);
+                if (isFirst.Checked)
+                    output.Text = polinom1.Pow(pow).ToString();
+                else
+                    output.Text = polinom2.Pow(pow).ToString();
             }
-            catch (Exception)
+            catch (Exception err)
             {
-                MessageBox.Show("ошибка");
+                MessageBox.Show("РћС€РёР±РєР°: " + err.Message);
+            }
+        }
+
+        private void integral1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (isFirst.Checked)
+                    output.Text = polinom1.Integral().ToString();
+                else
+                    output.Text = polinom2.Integral().ToString();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("РћС€РёР±РєР°: " + err.Message);
+            }
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (isFirst.Checked)
+                    output.Text = polinom1.Derivative().ToString();
+                else
+                    output.Text = polinom2.Derivative().ToString();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("РћС€РёР±РєР°: " + err.Message);
+            }
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                PolinomRoots pol;
+                if (isFirst.Checked)
+                {
+                    pol = polinom1;
+                }
+                else
+                {
+                    pol = polinom2;
+                }
+
+                List<(double x, double y, ExtremumPointType stPointType)> extremumPoints = pol.FindAllExtremumPoints(-MAX_X, MAX_X);
+                extremumPoints.RemoveAll(item => double.IsNaN(item.x));
+                extremumPoints = extremumPoints.OrderBy(item => item.x).ToList();
+                string s = "";
+                foreach (var item in extremumPoints)
+                    s += $"({item.x}; {item.y}) - С‚РѕС‡РєР° " + (item.stPointType == ExtremumPointType.Min ? "РјРёРЅРёРјСѓРјР°" : "РјР°РєСЃРёРјСѓРјР°") + "\n";
+                output.Text = s;
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("РћС€РёР±РєР°: " + err.Message);
+            }
+        }
+
+        private void parse_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string[] coefsStr = parsing.Text.Trim().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                double[] coefs = new double[coefsStr.Length];
+                for (int i = 0; i < coefsStr.Length; i++)
+                {
+                    coefs[i] = double.Parse(coefsStr[i]);
+                }
+                if (isFirst.Checked)
+                {
+                    polinom1 = new PolinomRoots(coefs);
+                    polinomText1.Text = polinom1.ToString();
+                }
+                else
+                {
+                    polinom2 = new PolinomRoots(coefs);
+                    polinomText2.Text = polinom2.ToString();
+                }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("РћС€РёР±РєР°: " + err.Message);
+            }
+        }
+
+        private void findRoots_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int fotx = int.Parse(FOTX.Text);
+                if (isFirst.Checked)
+                {
+                    output.Text = string.Join("\n", polinom1.FindAllRootsNewton(-MAX_X, MAX_X, fotx));
+                }
+                else
+                {
+                    output.Text = string.Join("\n", polinom2.FindAllRootsNewton(-MAX_X, MAX_X, fotx));
+                }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("РћС€РёР±РєР°: " + err.Message);
             }
         }
     }
