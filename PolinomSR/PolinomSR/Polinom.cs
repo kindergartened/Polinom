@@ -9,10 +9,17 @@ namespace PolinomSR
         /// </summary>
         /// <param name="n">Степень полинома</param>
         /// <param name="koef">Коэффициенты полинома</param>
-        private int n;
-        private double[] koef;
+        protected int n;
+        protected double[] koef;
         static Random r = new Random();
         
+        public int N
+        {
+            get
+            {
+                return n;
+            }
+        }
         /// <summary>
         /// Свойство для получения массива коэффициентов
         /// </summary>
@@ -288,19 +295,6 @@ namespace PolinomSR
             return p * p2;
         }
     }
-    /// <summary>
-    /// Класс Полином с возможностью вычислить корни и найти точки экстремума
-    /// </summary>
-    public class PolinomRoots : Polinom
-    {
-        protected List<double> roots=new();
-
-        //свойство для доступа к корням полинома
-        public List<double> Roots
-        {
-            get { return roots; }
-        }
-
-    }
+    
 }
 

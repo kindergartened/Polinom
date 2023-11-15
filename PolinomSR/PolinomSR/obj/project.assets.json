@@ -8,23 +8,23 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Nik\\.nuget\\packages\\": {},
+    "C:\\Users\\Dmitrich7\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\polinom\\PolinomSR\\PolinomSR\\PolinomSR.csproj",
+      "projectUniqueName": "C:\\Users\\Dmitrich7\\Source\\Repos\\Polinom\\PolinomSR\\PolinomSR\\PolinomSR.csproj",
       "projectName": "PolinomSR",
-      "projectPath": "F:\\polinom\\PolinomSR\\PolinomSR\\PolinomSR.csproj",
-      "packagesPath": "C:\\Users\\Nik\\.nuget\\packages\\",
-      "outputPath": "F:\\polinom\\PolinomSR\\PolinomSR\\obj\\",
+      "projectPath": "C:\\Users\\Dmitrich7\\Source\\Repos\\Polinom\\PolinomSR\\PolinomSR\\PolinomSR.csproj",
+      "packagesPath": "C:\\Users\\Dmitrich7\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Dmitrich7\\Source\\Repos\\Polinom\\PolinomSR\\PolinomSR\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Nik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Dmitrich7\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -33,7 +33,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -67,7 +66,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
