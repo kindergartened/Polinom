@@ -224,7 +224,7 @@ namespace ForforPolinom
                 double[] coefs = new double[coefsStr.Length];
                 for (int i = 0; i < coefsStr.Length; i++)
                 {
-                    coefs[i] = double.Parse(coefsStr[i]);
+                    coefs[i] = double.Parse(coefsStr[coefsStr.Length - 1 - i]);
                 }
                 if (isFirst.Checked)
                 {
