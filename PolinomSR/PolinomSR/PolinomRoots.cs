@@ -147,10 +147,10 @@ namespace PolinomSR
             PolinomRoots pol = new PolinomRoots(koef);
             pol.koef[0] -= y;  // если мы хотим найти значения x, при которых функция равна y,
             // то от полинома можно отнять этот y и искать значения x, при которых функция равна 0
-            double eps = 1e-1;
+            double eps = 1;
             if (pol.P(a) * pol.P(b) <= 0)
                 return true;
-            else if (b - a < eps)
+            else if (Math.Abs(b - a) < (eps) )
                 return false;
             else
             {
